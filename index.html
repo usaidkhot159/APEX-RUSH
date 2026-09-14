@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APEX RUSH — High Speed Racing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/screens.css" />
+  <link rel="stylesheet" href="css/hud.css" />
+  <link rel="stylesheet" href="css/canvas.css" />
+  <link rel="stylesheet" href="css/garage.css" />
+  <link rel="stylesheet" href="css/powerups.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/gameover.css" />
+  <link rel="stylesheet" href="css/challenges.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="screen-menu" class="screen active"></div>
+    <div id="screen-garage" class="screen"></div>
+    <div id="screen-game" class="screen">
+      <div id="hud"></div>
+      <canvas id="gameCanvas"></canvas>
+      <div id="powerup-display"></div>
+      <div id="combo-display"></div>
+    </div>
+    <div id="screen-gameover" class="screen"></div>
+    <div id="screen-challenges" class="screen"></div>
+  </div>
+
+  <!-- Audio context placeholder -->
+  <div id="audio-container" hidden></div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/road.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/enemy.js"></script>
+  <script src="js/coin.js"></script>
+  <script src="js/powerup.js"></script>
+  <script src="js/collision.js"></script>
+  <script src="js/hud.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/environment.js"></script>
+  <script src="js/gameLoop.js"></script>
+  <script src="js/screens/menu.js"></script>
+  <script src="js/screens/garage.js"></script>
+  <script src="js/screens/gameover.js"></script>
+  <script src="js/screens/challenges.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

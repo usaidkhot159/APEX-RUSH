@@ -1,0 +1,5 @@
+/* Canvas-drawn power-ups get glow aura helper class */
+.powerup-glow-shield  { filter: drop-shadow(0 0 12px #00f5ff); }
+.powerup-glow-nitro   { filter: drop-shadow(0 0 12px #ff6b00); }
+.powerup-glow-magnet  { filter: drop-shadow(0 0 12px #bf5fff); }
+.powerup-glow-slow    { filter: drop-shadow(0 0 12px #44ccff); }

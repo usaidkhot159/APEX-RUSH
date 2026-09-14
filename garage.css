@@ -1,0 +1,263 @@
+#screen-garage {
+  background: radial-gradient(ellipse 80% 60% at 50% 100%, #140820 0%, var(--bg-deep) 70%);
+  padding: 24px 16px;
+  overflow-y: auto;
+}
+
+.garage-header {
+  text-align: center;
+  margin-bottom: 28px;
+  width: 100%;
+}
+
+.garage-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  color: var(--neon-purple);
+  text-shadow: var(--glow-yellow);
+  margin-bottom: 4px;
+}
+
+.garage-coins-display {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--neon-yellow);
+  text-shadow: var(--glow-yellow);
+  letter-spacing: 0.05em;
+}
+
+.garage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.car-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--r-lg);
+  padding: 20px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--t-mid);
+  position: relative;
+  overflow: hidden;
+}
+
+.car-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,245,255,0.04) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity var(--t-mid);
+}
+
+.car-card:hover::before { opacity: 1; }
+.car-card:hover {
+  border-color: rgba(0,245,255,0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 20px rgba(0,245,255,0.08);
+}
+
+.car-card.selected {
+  border-color: var(--neon-cyan);
+  box-shadow: var(--glow-cyan), inset 0 0 20px rgba(0,245,255,0.06);
+}
+
+.car-card.locked {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.car-card.locked:hover { transform: none; }
+
+.car-emoji {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 8px currentColor);
+}
+
+.car-name {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.car-price {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  color: var(--neon-yellow);
+  margin-bottom: 10px;
+}
+
+.car-price.free { color: var(--neon-green); }
+
+.car-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.stat-label {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  width: 50px;
+  text-align: left;
+}
+
+.stat-bar {
+  flex: 1;
+  height: 4px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.stat-fill {
+  height: 100%;
+  border-radius: 99px;
+}
+
+.stat-fill.speed   { background: var(--neon-cyan); }
+.stat-fill.handle  { background: var(--neon-pink); }
+.stat-fill.armor   { background: var(--neon-green); }
+
+.car-badge-owned {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 0.55rem;
+  font-family: var(--font-display);
+  padding: 2px 6px;
+  border-radius: 99px;
+  background: var(--neon-green);
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.car-badge-selected {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 0.55rem;
+  font-family: var(--font-display);
+  padding: 2px 6px;
+  border-radius: 99px;
+  background: var(--neon-cyan);
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* Color customizer */
+.garage-customize {
+  width: 100%;
+  max-width: 600px;
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--r-lg);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.customize-title {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.color-swatches {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.color-swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all var(--t-fast);
+  position: relative;
+}
+
+.color-swatch.active {
+  border-color: #fff;
+  box-shadow: 0 0 12px currentColor;
+  transform: scale(1.15);
+}
+
+.neon-toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.toggle-label {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.08em;
+}
+
+.toggle-switch {
+  width: 44px;
+  height: 24px;
+  border-radius: 99px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  position: relative;
+  cursor: pointer;
+  transition: background var(--t-fast);
+}
+
+.toggle-switch.on {
+  background: rgba(0,245,255,0.3);
+  border-color: var(--neon-cyan);
+  box-shadow: var(--glow-cyan);
+}
+
+.toggle-knob {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left var(--t-fast);
+}
+
+.toggle-switch.on .toggle-knob { left: 22px; }
+
+.garage-back-btn {
+  margin-top: 8px;
+}

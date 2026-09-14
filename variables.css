@@ -1,0 +1,45 @@
+:root {
+  /* Core palette — neon noir */
+  --bg-deep:      #050810;
+  --bg-mid:       #0a0f1e;
+  --bg-surface:   #0f1730;
+  --bg-card:      #131d38;
+
+  --neon-cyan:    #00f5ff;
+  --neon-pink:    #ff2d78;
+  --neon-yellow:  #ffe500;
+  --neon-green:   #39ff14;
+  --neon-purple:  #bf5fff;
+  --neon-orange:  #ff6b00;
+
+  --text-primary:   #e8f4ff;
+  --text-secondary: #7a9cc4;
+  --text-muted:     #3a5070;
+
+  --road-dark:   #0d1117;
+  --road-mid:    #141c24;
+  --road-light:  #1e2a38;
+  --lane-line:   #f0c040;
+  --lane-white:  #ffffff22;
+
+  /* Glow effects */
+  --glow-cyan:   0 0 8px #00f5ff, 0 0 20px #00f5ff60, 0 0 40px #00f5ff30;
+  --glow-pink:   0 0 8px #ff2d78, 0 0 20px #ff2d7860, 0 0 40px #ff2d7830;
+  --glow-yellow: 0 0 8px #ffe500, 0 0 20px #ffe50060, 0 0 40px #ffe50030;
+  --glow-green:  0 0 8px #39ff14, 0 0 20px #39ff1460, 0 0 40px #39ff1430;
+
+  /* Typography */
+  --font-display: 'Orbitron', monospace;
+  --font-body:    'Rajdhani', sans-serif;
+
+  /* Radii */
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 16px;
+  --r-xl: 24px;
+
+  /* Timing */
+  --t-fast: 150ms;
+  --t-mid:  300ms;
+  --t-slow: 600ms;
+}

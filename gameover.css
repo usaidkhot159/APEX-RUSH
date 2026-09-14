@@ -1,0 +1,115 @@
+#screen-gameover {
+  background: radial-gradient(ellipse 70% 50% at 50% 50%, #1a0510 0%, var(--bg-deep) 70%);
+}
+
+.gameover-wrap {
+  text-align: center;
+  animation: zoomIn 0.5s cubic-bezier(0.34,1.56,0.64,1);
+  position: relative;
+  z-index: 1;
+  padding: 24px 16px;
+  max-width: 360px;
+  width: 100%;
+}
+
+.gameover-crash {
+  font-size: 3.5rem;
+  animation: float 2s ease-in-out infinite;
+  display: block;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 0 20px #ff2d78);
+}
+
+.gameover-title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: var(--neon-pink);
+  text-shadow: var(--glow-pink);
+  margin-bottom: 4px;
+}
+
+.gameover-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.gameover-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.gameover-stat-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--r-md);
+  padding: 14px 10px;
+}
+
+.go-stat-label {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.go-stat-value {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.go-stat-value.highlight { color: var(--neon-cyan); text-shadow: var(--glow-cyan); }
+.go-stat-value.gold      { color: var(--neon-yellow); text-shadow: var(--glow-yellow); }
+.go-stat-value.green     { color: var(--neon-green); text-shadow: var(--glow-green); }
+.go-stat-value.pink      { color: var(--neon-pink); text-shadow: var(--glow-pink); }
+
+.gameover-best-banner {
+  background: linear-gradient(135deg, rgba(255,229,0,0.08), rgba(255,107,0,0.08));
+  border: 1px solid rgba(255,229,0,0.2);
+  border-radius: var(--r-md);
+  padding: 10px 16px;
+  margin-bottom: 20px;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--neon-yellow);
+  text-shadow: var(--glow-yellow);
+}
+
+.gameover-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.challenges-completed {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.challenge-done {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(57,255,20,0.06);
+  border: 1px solid rgba(57,255,20,0.2);
+  border-radius: var(--r-sm);
+  padding: 6px 10px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--neon-green);
+}
